@@ -1,0 +1,87 @@
+/* Perusasetukset */
+html {
+    scroll-behavior: smooth; /* Lisää sujuva vieritys */
+}
+
+body {
+    font-family: 'Georgia Pro', serif;
+    font-size: 12px;
+    color: black;
+    background-color: #f5f5dc; /* Beige taustaväri */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    background-color: #e0dab5; /* Hieman tummempi beige header */
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+.hamburger {
+    cursor: pointer; /* Muuta osoittimen tyyliä */
+    font-size: 24px; /* Suuri fonttikoko */
+}
+
+input[type="checkbox"] {
+    display: none; /* Piilota checkbox */
+}
+
+.menu {
+    display: none; /* Aluksi piilotettu */
+    flex-direction: column; /* Valikko pystysuuntaan */
+    position: absolute; /* Aseta valikko absoluuttisesti */
+    top: 50px; /* Aseta valikon yläreuna headerin alapuolelle */
+    right: 0;
+    background-color: #e0dab5; /* Valikon taustaväri */
+    width: 200px; /* Valikon leveys */
+    border: 1px solid #333; /* Rajoitus valikon ympärille */
+}
+
+input[type="checkbox"]:checked + .menu {
+    display: flex; /* Näytä valikko, kun checkbox on valittuna */
+}
+
+.content {
+    display: block; /* Kaikki osiot näkyvät aluksi */
+    padding: 20px; /* Lisää vähän tilaa */
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #e0dab5;
+}
+
+button, .next-btn {
+    font-size: 12px;
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover, .next-btn:hover {
+    background-color: #555;
+}
+
+.next-btn {
+    text-decoration: none;
+    color: white;
+}
+
+.profile-image {
+    max-width: 100%; /* Rajoita kuvan leveyttä */
+    height: auto; /* Pidä kuvan korkeus suhteessa */
+}
